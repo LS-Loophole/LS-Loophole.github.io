@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>LS-Loophole</title>
+  <title>&#39;UCMS v1.5.0 XSS dir parameter&#39; | LS-Loophole</title>
   <meta name="keywords" content="">
-  <meta name="description" content="LS-Loophole">
+  <meta name="description" content="&#39;UCMS v1.5.0 XSS dir parameter&#39; | LS-Loophole">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="UCMS v.1.5.0 Command executionVulnerability Type :Eval injection Vulnerability Version :1.5.0 Recurring environment: Windows 10 PHP 5.4.5 Apache 2.4.23  Vulnerability Description AND recurrence:1、The">
 <meta property="og:type" content="article">
@@ -62,7 +62,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -197,12 +197,43 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-Ready UCMS v1.5.0 XSS dir parameter" class="article article-type-post" itemscope itemprop="blogPost">
     
+        <h1 class="article-title">&#39;UCMS v1.5.0 XSS dir parameter&#39;</h1>
+    
+    <div class="article-meta">
         
+        
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2020-09-22 19:53:24'>2020-09-22 19:48</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#UCMS-v1-5-0-XSS-dir-parameter"><span class="toc-text">UCMS v1.5.0 XSS dir parameter</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Type"><span class="toc-text">Vulnerability Type :</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Version"><span class="toc-text">Vulnerability Version :</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Recurring-environment"><span class="toc-text">Recurring environment:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Description-AND-recurrence"><span class="toc-text">Vulnerability Description AND recurrence:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Vulnerability-recurrence"><span class="toc-text">Vulnerability recurrence:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vulnerability-analysis"><span class="toc-text">Vulnerability analysis:</span></a></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -215,15 +246,78 @@
     }
 </style>
 </div>
-            <p>测试站</p>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="UCMS-v1-5-0-XSS-dir-parameter"><a href="#UCMS-v1-5-0-XSS-dir-parameter" class="headerlink" title="UCMS v1.5.0 XSS dir parameter"></a>UCMS v1.5.0 XSS dir parameter</h1><h2 id="Vulnerability-Type"><a href="#Vulnerability-Type" class="headerlink" title="Vulnerability Type :"></a>Vulnerability Type :</h2><p>Cross Site Scripting(XSS)</p>
+<h2 id="Vulnerability-Version"><a href="#Vulnerability-Version" class="headerlink" title="Vulnerability Version :"></a>Vulnerability Version :</h2><p>1.5.0</p>
+<h2 id="Recurring-environment"><a href="#Recurring-environment" class="headerlink" title="Recurring environment:"></a>Recurring environment:</h2><ul>
+<li>Windows 10</li>
+<li>PHP 5.4.5</li>
+<li>Apache 2.4.23</li>
+</ul>
+<h2 id="Vulnerability-Description-AND-recurrence"><a href="#Vulnerability-Description-AND-recurrence" class="headerlink" title="Vulnerability Description AND recurrence:"></a>Vulnerability Description AND recurrence:</h2><h3 id="Vulnerability-recurrence"><a href="#Vulnerability-recurrence" class="headerlink" title="Vulnerability recurrence:"></a>Vulnerability recurrence:</h3><p>Vulnerability URL:<br><a target="_blank" rel="noopener" href="http://www.ucm1.5.0.com/ucms/index.php?do=sadmin_fileedit&amp;dir=/&amp;file=index.php">www.ucm1.5.0.com/ucms/index.php?do=sadmin_fileedit&amp;dir=/&amp;file=index.php</a></p>
+<p>There is an XSS vulnerability in the dir parameter. You can splice &lt;script&gt;alert(&apos;CNVD&apos;)&lt;/script&gt; here to trigger the vulnerability </p>
+<p><a target="_blank" rel="noopener" href="http://www.ucm1.5.0.com/ucms/index.php?do=sadmin_fileedit&amp;dir=/&lt;script&gt;alert(&apos;CNVD&apos;)&lt;/script&gt;&amp;file=index.php">www.ucm1.5.0.com/ucms/index.php?do=sadmin_fileedit&amp;dir=/&lt;script&gt;alert(&apos;CNVD&apos;)&lt;/script&gt;&amp;file=index.php</a></p>
+<p><img src="/imgss/26.png"></p>
+<h3 id="Vulnerability-analysis"><a href="#Vulnerability-analysis" class="headerlink" title="Vulnerability analysis:"></a>Vulnerability analysis:</h3><p>Because this cms uses routing, so?do=sadmin_fileedit&amp;dir=/&amp;file=index.php<br>The actual operation of \ucms\sadmin\fileedit.php</p>
+<p><img src="/imgss/27.png"></p>
+<p>There are three trigger parameters here, namely: do=sadmin_fileedit, dir=/, file=index.php.</p>
+<p>Look here for the vulnerability trigger points in the source file \ucms\sadmin\fileedit.php</p>
+<p>The $dir variable at line 87 has an xss vulnerability</p>
+<p><img src="/imgss/28.png"></p>
+<p>Go back here to find out why there is a problem with $dir here! Start from the beginning</p>
+<p><img src="/imgss/29.png"></p>
+<p>The first few lines are the previous conditions<br>Line 2, this file can not be accessed directly. Need to visit on behalf of the route through the middle.<br>Line 3, judge the current level. After logging in here, it is 3 so it is not executed<br>Line 4, determines whether there is a constant AdminFileedit. It exists by default here so it is not executed</p>
+<p><img src="/imgss/30.png"></p>
+<p>Line 7, need to GET parameters passed in a dir, or exit PHP<br>Line 8, if the incoming transmission parameter dir is null, a default assignment &apos;/&apos;<br>Line 11, $_GET [ &apos;dir&apos;] $ incoming variable GETDIR<br>Line 12-16, the $ _GET [ &apos;dir&apos;] of data into variable $dir<br>Line 17, join the current webpage directory $_GET[&apos;dir&apos;] and&apos;/&apos; and then pass it into $alldir<br>Line 18, prevent directory traversal loopholes. When the dir we passed in<br>contains two… After outputting&apos;error dir&apos; and exiting PHP</p>
+<p><img src="/imgss/31.png"></p>
+<p>Line 22, we need to pass GET variables file. Otherwise, exit PHP after outputting&apos;no file&apos;<br>Line 23, the incoming file $ filename<br>Line24, prevent directory traversal loopholes. If the variable exists… then exit after outputting&apos;error filename&apos;<br>Line 25, the function call isedit 50 rows. The isedit function uses the foreach function to return only the suffix of $filename. Returns true if the suffix is one of the $array. If it is satisfied here, the content of line 26 will not be executed<br>Line 31, where the vulnerability is triggered no incoming POST, so here we do not need to look at the code here<br>Line 44, to determine $ alldir. $ Filename spliced out whether a file exists. If there is no $content assignment is empty, if it exists, the content html inside will be instantiated and assigned to the $content variable</p>
+<p><img src="/imgss/32.png"></p>
+<p>Summarize here:</p>
+<ol>
+<li>The role of do is to specify the back-end file of the incoming data</li>
+<li>The dir variable needs to be passed in without filtering</li>
+<li>The file variable needs to be passed in a random file name and the suffix<br>is any one of&apos;php&apos;,&apos;css&apos;,&apos;js&apos;,&apos;htm&apos;,&apos;html&apos;,&apos;txt&apos;.</li>
+</ol>
+<p>Then the vulnerability point is directly output $dir without any filtering, so the xss vulnerability is caused</p>
+<p><img src="/imgss/33.png"></p>
+<p>PayLoad</p>
+<pre><code>GET /ucms/index.php?do=sadmin_fileedit&amp;dir=/%3Cscript%3Ealert(%27CNVD%27)%3C/script%3E&amp;file=index.php HTTP/1.1
+Host: www.ucm1.5.0.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: gzip, deflate
+Connection: close
+Cookie: admin_a83bb0=admin; psw_a83bb0=6609024d5fb57f730314b384acb138e4; 
+token_a83bb0=8a0b8a85; admin_ba3e0b=admin; 
+psw_ba3e0b=a69740dcfe6f719f3d2342de92331f8c; token_ba3e0b=d45fd502; 
+admin_7783c8=admin; psw_7783c8=06597b3a724e1f8748b2d0098727e163; 
+token_7783c8=3cc0d357
+Upgrade-Insecure-Requests: 1
+</code></pre>
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -232,11 +326,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 <div class="hide_box" onclick="dashangToggle()"></div>
